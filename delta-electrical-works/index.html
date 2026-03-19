@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delta Electrical Works</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #333333;
+        }
+        
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            background-color: #3498db;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .sticky-nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+        
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/1920x1080/?electrician');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+        }
+        
+        .hero h1 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .hero p {
+            font-size: 14px;
+        }
+        
+        .whatsapp-cta {
+            background-color: #25D366;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        
+        .service-card {
+            background-color: #ffffff;
+            padding: 20px;
+            border: 1px solid #dddddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-card i {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .about {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        
+        .about-text {
+            width: 50%;
+        }
+        
+        .stats {
+            width: 50%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        
+        .stat {
+            background-color: #f7f7f7;
+            padding: 10px;
+            border: 1px solid #dddddd;
+            border-radius: 10px;
+        }
+        
+        .contact {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        
+        .contact-info {
+            width: 40%;
+        }
+        
+        .contact-form {
+            width: 60%;
+        }
+        
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        footer {
+            background-color: #333333;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        @media only screen and (max-width: 768px) {
+            .services {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .about {
+                flex-direction: column;
+            }
+            .about-text, .stats {
+                width: 100%;
+            }
+            .contact {
+                flex-direction: column;
+            }
+            .contact-info, .contact-form {
+                width: 100%;
+            }
+        }
+        
+        @media only screen and (max-width: 480px) {
+            .services {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="sticky-nav">
+        <a href="#">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <img src="https://via.placeholder.com/50x50" alt="Delta Electrical Works Logo">
+    </nav>
+    <section class="hero">
+        <h1>Powering Your Home and Business</h1>
+        <p>Delta Electrical Works is a leading electrical services company in Dubai.</p>
+        <button class="whatsapp-cta" onclick="window.location.href='https://wa.me/971558092731'">WhatsApp Us</button>
+    </section>
+    <section id="services" class="services">
+        <div class="service-card">
+            <i class="fa-solid fa-bolt"></i>
+            <h2>Electrical Installation</h2>
+            <p>Installation of electrical systems, including wiring, circuits, and outlets.</p>
+        </div>
+        <div class="service-card">
+            <i class="fa-solid fa-wrench"></i>
+            <h2>Electrical Repair</h2>
+            <p>Repair of faulty electrical systems, including diagnosis and troubleshooting.</p>
+        </div>
+        <div class="service-card">
+            <i class="fa-solid fa-lightbulb"></i>
+            <h2>Lighting Installation</h2>
+            <p>Installation of indoor and outdoor lighting systems.</p>
+        </div>
+        <div class="service-card">
+            <i class="fa-solid fa-screwdriver"></i>
+            <h2>Electrical Maintenance</h2>
+            <p>Regular maintenance of electrical systems to prevent faults and ensure efficiency.</p>
+        </div>
+        <div class="service-card">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <h2>Electrical Inspections</h2>
+            <p>Inspection of electrical systems to identify potential hazards and ensure compliance with safety standards.</p>
+        </div>
+        <div class="service-card">
+            <i class="fa-solid fa-phone"></i>
+            <h2>Emergency Electrical Services</h2>
+            <p>Emergency electrical services, including 24/7 response to electrical emergencies.</p>
+        </div>
+    </section>
+    <section id="about" class="about">
+        <div class="about-text">
+            <h2>About Us</h2>
+            <p>Delta Electrical Works is a leading electrical services company in Dubai, providing reliable, efficient, and cost-effective solutions to our customers.</p>
+        </div>
+        <div class="stats">
+            <div class="stat">
+                <h2>10</h2>
+                <p>Years of Experience</p>
+            </div>
+            <div class="stat">
+                <h2>100</h2>
+                <p>Successful Projects</p>
+            </div>
+            <div class="stat">
+                <h2>50</h2>
+                <p>Trained Electricians</p>
+            </div>
+            <div class="stat">
+                <h2>24/7</h2>
+                <p>Emergency Services</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <div class="contact-info">
+            <h2>Contact Info</h2>
+            <p>Phone: +971558092731</p>
+            <p>Email: [info@deltaworks.ae](mailto:info@deltaworks.ae)</p>
+            <p>Instagram: @deltaworks_dubai</p>
+        </div>
+        <div class="contact-form">
+            <h2>Contact Form</h2>
+            <form>
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <textarea placeholder="Message"></textarea>
+                <button>Send</button>
+            </form>
+        </div>
+    </section>
+    <button class="floating-whatsapp" onclick="window.location.href='https://wa.me/971558092731'">WhatsApp Us</button>
+    <footer>
+        <p>&copy; 2026 Delta Electrical Works. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+```
