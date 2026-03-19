@@ -3,50 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Al Karama Cleaning Co</title>
+    <title>Al Karama Cleaning Co.</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
+        /* Global Styles */
         body {
-            font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 0;
+            font-family: 'Inter', sans-serif;
             scroll-behavior: smooth;
         }
-        .nav {
-            background-color: #0F1B2A;
+        a {
+            text-decoration: none;
+            color: #94A3B8;
+        }
+        a:hover {
             color: #E8F4F8;
-            padding: 1rem;
+        }
+        /* Navigation */
+        .nav {
             position: sticky;
             top: 0;
+            background-color: #0F1B2A;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         .nav a {
-            color: #94A3B8;
-            text-decoration: none;
+            margin-left: 2rem;
         }
-        .nav a:hover {
-            color: #E8F4F8;
-        }
+        /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #0F1B2A 0%, #1a2f4a 50%, #0d2137 100%);
             min-height: 100vh;
+            background: linear-gradient(135deg, #0F1B2A 0%, #1a2f4a 50%, #0d2137 100%);
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #E8F4F8;
             flex-direction: column;
         }
         .hero-badge {
             background-color: #00C9FF;
             color: #E8F4F8;
-            padding: 0.5rem;
-            border-radius: 10px;
-            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 1rem;
             margin-bottom: 1rem;
         }
         .hero-headline {
             font-size: clamp(2.5rem, 5vw, 4rem);
             font-weight: 800;
+            color: #E8F4F8;
             margin-bottom: 1rem;
         }
         .hero-subheading {
@@ -61,17 +68,17 @@
         .hero-cta button {
             padding: 1rem 2rem;
             border: none;
-            border-radius: 10px;
-            font-size: 1rem;
+            border-radius: 0.5rem;
             cursor: pointer;
         }
-        .hero-cta button.primary {
+        .hero-cta .primary {
             background-color: #00C9FF;
             color: #E8F4F8;
         }
-        .hero-cta button.secondary {
-            border: 1px solid #00C9FF;
-            color: #00C9FF;
+        .hero-cta .secondary {
+            background-color: transparent;
+            color: #E8F4F8;
+            border: 1px solid #E8F4F8;
         }
         .hero-stats {
             display: flex;
@@ -80,33 +87,58 @@
         }
         .hero-stat {
             background-color: rgba(255, 255, 255, 0.05);
-            padding: 1rem;
-            border-radius: 10px;
+            padding: 1rem 2rem;
             border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
+        /* Services Section */
         .services {
             background-color: #0F1B2A;
-            padding: 2rem;
+            padding: 5rem 0;
+        }
+        .services-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
         }
         .service-card {
             background-color: rgba(255, 255, 255, 0.05);
-            padding: 2rem;
-            border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .service-icon {
-            color: #00C9FF;
             font-size: 2.5rem;
+            color: #00C9FF;
             margin-bottom: 1rem;
         }
+        .service-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #E8F4F8;
+            margin-bottom: 1rem;
+        }
+        .service-description {
+            font-size: 16px;
+            color: #94A3B8;
+            margin-bottom: 1rem;
+        }
+        .get-quote {
+            color: #00C9FF;
+        }
+        /* Why Us Section */
         .why-us {
             display: flex;
+            flex-wrap: wrap;
             gap: 2rem;
-            padding: 2rem;
+            padding: 5rem 0;
         }
         .why-us-item {
             display: flex;
@@ -118,76 +150,140 @@
             color: #00C9FF;
             margin-bottom: 1rem;
         }
+        .why-us-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #E8F4F8;
+            margin-bottom: 1rem;
+        }
+        .why-us-text {
+            font-size: 16px;
+            color: #94A3B8;
+        }
+        /* Stats Counter Section */
         .stats-counter {
             background-color: #0F1B2A;
-            padding: 2rem;
-            display: flex;
-            gap: 2rem;
+            padding: 5rem 0;
+            position: relative;
         }
-        .stat {
+        .stats-counter::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5rem;
+            background: linear-gradient(135deg, #00C9FF 0%, #1a2f4a 50%, #0d2137 100%);
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            padding-top: 5rem;
+        }
+        .stat-item {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-        .stat-value {
-            font-size: 2rem;
+        .stat-number {
+            font-size: 24px;
             font-weight: bold;
-            margin-bottom: 0.5rem;
+            color: #E8F4F8;
+            margin-bottom: 1rem;
         }
+        .stat-label {
+            font-size: 16px;
+            color: #94A3B8;
+        }
+        /* Testimonials Section */
         .testimonials {
             background-color: #0F1B2A;
-            padding: 2rem;
+            padding: 5rem 0;
+        }
+        .testimonial-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
         }
         .testimonial-card {
             background-color: rgba(255, 255, 255, 0.05);
-            padding: 2rem;
-            border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 2rem;
         }
         .testimonial-icon {
             font-size: 2rem;
             color: #00C9FF;
             margin-bottom: 1rem;
         }
-        .contact-section {
-            display: flex;
-            gap: 2rem;
-            padding: 2rem;
+        .testimonial-text {
+            font-size: 16px;
+            color: #94A3B8;
+            margin-bottom: 1rem;
         }
-        .contact-form {
+        .testimonial-reviewer {
+            font-size: 16px;
+            color: #E8F4F8;
+        }
+        /* Contact Section */
+        .contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding: 5rem 0;
+        }
+        .contact-info {
             display: flex;
             flex-direction: column;
-            gap: 1rem;
         }
-        .contact-input {
-            padding: 1rem;
-            border: none;
-            border-radius: 10px;
-            font-size: 1rem;
+        .contact-phone {
+            font-size: 18px;
+            color: #E8F4F8;
+            margin-bottom: 1rem;
         }
-        .contact-button {
+        .contact-email {
+            font-size: 16px;
+            color: #94A3B8;
+            margin-bottom: 1rem;
+        }
+        .contact-whatsapp {
             background-color: #00C9FF;
             color: #E8F4F8;
             padding: 1rem 2rem;
             border: none;
-            border-radius: 10px;
-            font-size: 1rem;
+            border-radius: 0.5rem;
             cursor: pointer;
         }
-        .wa-button {
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-form input, .contact-form textarea {
+            padding: 1rem;
+            border: none;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .contact-form input[type="submit"] {
+            background-color: #00C9FF;
+            color: #E8F4F8;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+        }
+        /* Floating WA Button */
+        .floating-wa {
             position: fixed;
             bottom: 2rem;
             right: 2rem;
             background-color: #00C9FF;
             color: #E8F4F8;
-            padding: 1rem;
+            padding: 1rem 2rem;
             border: none;
             border-radius: 50%;
-            font-size: 1rem;
             cursor: pointer;
             animation: pulse 2s infinite;
         }
@@ -202,177 +298,162 @@
                 transform: scale(1);
             }
         }
+        /* Footer */
         .footer {
             background-color: #0F1B2A;
-            padding: 1rem;
+            padding: 2rem 0;
             text-align: center;
+        }
+        .footer-text {
+            font-size: 16px;
             color: #94A3B8;
+            margin-bottom: 1rem;
+        }
+        .footer-link {
+            font-size: 16px;
+            color: #E8F4F8;
+            margin-bottom: 1rem;
         }
     </style>
 </head>
 <body>
     <nav class="nav">
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-            <span style="color: #00C9FF; font-size: 1.5rem; font-weight: bold;">Al Karama Cleaning Co</span>
-            <ul style="list-style: none; margin: 0; padding: 0; display: flex; gap: 2rem;">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
+        <span style="color: #00C9FF; font-size: 18px;">Al Karama Cleaning Co.</span>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
     </nav>
-    <section class="hero" id="hero">
+    <section class="hero">
         <div class="hero-badge">⭐ Trusted in Dubai since 2018</div>
-        <h1 class="hero-headline">Dubai's Most Trusted Cleaning Specialists</h1>
-        <p class="hero-subheading">We provide reliable and efficient cleaning services for residential and commercial properties.</p>
+        <h1 class="hero-headline">Sparking Clean, Every Time</h1>
+        <p class="hero-subheading">Reliable and efficient cleaning services for your home and office.</p>
         <div class="hero-cta">
             <button class="primary"><i class="fa-solid fa-comment"></i> WhatsApp Us</button>
             <button class="secondary"><i class="fa-solid fa-phone"></i> Call Now</button>
         </div>
         <div class="hero-stats">
-            <div class="hero-stat">500+ Jobs</div>
-            <div class="hero-stat">5★ Rating</div>
-            <div class="hero-stat">Same Day Service</div>
-            <div class="hero-stat">Free Quote</div>
+            <div class="hero-stat">
+                <span>500+</span>
+                <p>Jobs Completed</p>
+            </div>
+            <div class="hero-stat">
+                <span>5★</span>
+                <p>Rating</p>
+            </div>
+            <div class="hero-stat">
+                <span>Same Day</span>
+                <p>Service</p>
+            </div>
+            <div class="hero-stat">
+                <span>Free</span>
+                <p>Quote</p>
+            </div>
         </div>
     </section>
     <section class="services" id="services">
-        <h2 style="color: #E8F4F8; font-size: 2rem; margin-bottom: 2rem;">Our Services</h2>
-        <div class="service-card">
-            <i class="fa-solid fa-broom service-icon"></i>
-            <h3>Residential Cleaning</h3>
-            <p>We provide thorough cleaning services for apartments, villas, and townhouses.</p>
-            <a href="#" style="color: #00C9FF;">Get Quote →</a>
-        </div>
-        <div class="service-card">
-            <i class="fa-solid fa-office-building service-icon"></i>
-            <h3>Commercial Cleaning</h3>
-            <p>We offer cleaning services for offices, restaurants, and retail stores.</p>
-            <a href="#" style="color: #00C9FF;">Get Quote →</a>
-        </div>
-        <div class="service-card">
-            <i class="fa-solid fa-industry service-icon"></i>
-            <h3>Industrial Cleaning</h3>
-            <p>We provide heavy-duty cleaning services for warehouses, factories, and construction sites.</p>
-            <a href="#" style="color: #00C9FF;">Get Quote →</a>
-        </div>
-        <div class="service-card">
-            <i class="fa-solid fa-box service-icon"></i>
-            <h3>Move-in/Move-out Cleaning</h3>
-            <p>We offer specialized cleaning services for new or departing tenants.</p>
-            <a href="#" style="color: #00C9FF;">Get Quote →</a>
-        </div>
-        <div class="service-card">
-            <i class="fa-solid fa-sprinkler service-icon"></i>
-            <h3>Deep Cleaning</h3>
-            <p>We provide intensive cleaning services for specific areas or entire properties.</p>
-            <a href="#" style="color: #00C9FF;">Get Quote →</a>
-        </div>
-        <div class="service-card">
-            <i class="fa-solid fa-party-popper service-icon"></i>
-            <h3>Special Event Cleaning</h3>
-            <p>We offer pre- and post-event cleaning services for weddings, parties, and other gatherings.</p>
-            <a href="#" style="color: #00C9FF;">Get Quote →</a>
+        <h2 style="color: #E8F4F8; font-size: 24px; margin-bottom: 2rem;">Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fa-solid fa-home service-icon" style="color: #00C9FF;"></i>
+                <h3 class="service-name">Residential Cleaning</h3>
+                <p class="service-description">One-time or recurring cleaning services for apartments, villas, and townhouses.</p>
+                <a class="get-quote" href="#contact">Get Quote →</a>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-building service-icon" style="color: #00C9FF;"></i>
+                <h3 class="service-name">Commercial Cleaning</h3>
+                <p class="service-description">Office and commercial space cleaning services, including daily, weekly, or monthly schedules.</p>
+                <a class="get-quote" href="#contact">Get Quote →</a>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-broom service-icon" style="color: #00C9FF;"></i>
+                <h3 class="service-name">Deep Cleaning</h3>
+                <p class="service-description">Thorough cleaning of homes and offices, including kitchens, bathrooms, and floors.</p>
+                <a class="get-quote" href="#contact">Get Quote →</a>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-truck service-icon" style="color: #00C9FF;"></i>
+                <h3 class="service-name">Move-In/Move-Out Cleaning</h3>
+                <p class="service-description">Specialized cleaning services for clients moving in or out of a property.</p>
+                <a class="get-quote" href="#contact">Get Quote →</a>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-couch service-icon" style="color: #00C9FF;"></i>
+                <h3 class="service-name">Furniture and Upholstery Cleaning</h3>
+                <p class="service-description">Cleaning and sanitizing of furniture, carpets, and upholstery.</p>
+                <a class="get-quote" href="#contact">Get Quote →</a>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-shirt service-icon" style="color: #00C9FF;"></i>
+                <h3 class="service-name">Laundry and Ironing Services</h3>
+                <p class="service-description">Convenient laundry and ironing services for individuals and families.</p>
+                <a class="get-quote" href="#contact">Get Quote →</a>
+            </div>
         </div>
     </section>
-    <section class="why-us" id="about">
-        <h2 style="color: #E8F4F8; font-size: 2rem; margin-bottom: 2rem;">Why Choose Us</h2>
+    <section class="why-us">
         <div class="why-us-item">
-            <i class="fa-solid fa-hourglass why-us-icon"></i>
-            <h3>Same-Day Response</h3>
-            <p>We respond to all inquiries within 24 hours.</p>
+            <i class="fa-solid fa-clock why-us-icon" style="color: #00C9FF;"></i>
+            <h3 class="why-us-title">Same-Day Response</h3>
+            <p class="why-us-text">We respond to all inquiries within 24 hours.</p>
         </div>
         <div class="why-us-item">
-            <i class="fa-solid fa-shield why-us-icon"></i>
-            <h3>Fully Licensed & Insured</h3>
-            <p>We are fully licensed and insured for your peace of mind.</p>
+            <i class="fa-solid fa-lock why-us-icon" style="color: #00C9FF;"></i>
+            <h3 class="why-us-title">Fully Licensed & Insured</h3>
+            <p class="why-us-text">We are fully licensed and insured for your peace of mind.</p>
         </div>
         <div class="why-us-item">
-            <i class="fa-solid fa-dollar-sign why-us-icon"></i>
-            <h3>Transparent Pricing</h3>
-            <p>We offer transparent pricing with no hidden fees.</p>
+            <i class="fa-solid fa-money-check why-us-icon" style="color: #00C9FF;"></i>
+            <h3 class="why-us-title">Transparent Pricing</h3>
+            <p class="why-us-text">We offer transparent pricing with no hidden fees.</p>
         </div>
     </section>
     <section class="stats-counter">
-        <div style="background: linear-gradient(135deg, #00C9FF 0%, #00C9FF 100%); height: 10px; width: 100%;"></div>
-        <div class="stat">
-            <h2 style="font-size: 2rem; font-weight: bold; margin-bottom: 0.5rem;">500+</h2>
-            <p>Jobs Completed</p>
-        </div>
-        <div class="stat">
-            <h2 style="font-size: 2rem; font-weight: bold; margin-bottom: 0.5rem;">12</h2>
-            <p>Years of Experience</p>
-        </div>
-        <div class="stat">
-            <h2 style="font-size: 2rem; font-weight: bold; margin-bottom: 0.5rem;">98%</h2>
-            <p>Customer Satisfaction Rate</p>
-        </div>
-        <div class="stat">
-            <h2 style="font-size: 2rem; font-weight: bold; margin-bottom: 0.5rem;">24/7</h2>
-            <p>Availability</p>
-        </div>
-    </section>
-    <section class="testimonials" id="testimonials">
-        <h2 style="color: #E8F4F8; font-size: 2rem; margin-bottom: 2rem;">What Our Clients Say</h2>
-        <div class="testimonial-card">
-            <i class="fa-solid fa-quote-left testimonial-icon"></i>
-            <p>Al Karama Cleaning Co did an amazing job cleaning my apartment. They were punctual, professional, and thorough.</p>
-            <h3>Mohammed Al Rashidi, Dubai</h3>
-        </div>
-        <div class="testimonial-card">
-            <i class="fa-solid fa-quote-left testimonial-icon"></i>
-            <p>I was impressed with the quality of service provided by Al Karama Cleaning Co. They exceeded my expectations.</p>
-            <h3>Priya Sharma, Dubai</h3>
-        </div>
-        <div class="testimonial-card">
-            <i class="fa-solid fa-quote-left testimonial-icon"></i>
-            <p>Al Karama Cleaning Co is the best cleaning company I've ever worked with. They are reliable, efficient, and affordable.</p>
-            <h3>Khalid Hassan, Dubai</h3>
+        <div class="stats-grid">
+            <div class="stat-item">
+                <span class="stat-number">500+</span>
+                <p class="stat-label">Jobs Completed</p>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">12</span>
+                <p class="stat-label">Years of Experience</p>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">98%</span>
+                <p class="stat-label">Customer Satisfaction</p>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">24/7</span>
+                <p class="stat-label">Availability</p>
+            </div>
         </div>
     </section>
-    <section class="contact-section" id="contact">
-        <div style="display: flex; flex-direction: column; gap: 1rem;">
-            <h2 style="color: #E8F4F8; font-size: 2rem; margin-bottom: 1rem;">Get Your Free Quote</h2>
-            <p style="color: #94A3B8; font-size: 1rem;">Contact us to schedule a cleaning service.</p>
-            <p style="color: #94A3B8; font-size: 1rem;">Phone: <a href="tel:+971501234567" style="color: #00C9FF;">+971 50 123 4567</a></p>
-            <p style="color: #94A3B8; font-size: 1rem;">Email: <a href="mailto:info@alkaramacleaningco.com" style="color: #00C9FF;">info@alkaramacleaningco.com</a></p>
-            <a href="https://wa.me/971501234567" style="background-color: #00C9FF; color: #E8F4F8; padding: 1rem 2rem; border: none; border-radius: 10px; font-size: 1rem; cursor: pointer;">WhatsApp Us</a>
+    <section class="testimonials">
+        <h2 style="color: #E8F4F8; font-size: 24px; margin-bottom: 2rem;">What Our Clients Say</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <i class="fa-solid fa-quote-left testimonial-icon" style="color: #00C9FF;"></i>
+                <p class="testimonial-text">Al Karama Cleaning Co. has been providing excellent cleaning services for my office. Highly recommended!</p>
+                <p class="testimonial-reviewer">Mohammed Al Rashidi, Dubai</p>
+            </div>
+            <div class="testimonial-card">
+                <i class="fa-solid fa-quote-left testimonial-icon" style="color: #00C9FF;"></i>
+                <p class="testimonial-text">The team at Al Karama Cleaning Co. is very professional and reliable. They do an amazing job every time.</p>
+                <p class="testimonial-reviewer">Priya Sharma, Dubai</p>
+            </div>
+            <div class="testimonial-card">
+                <i class="fa-solid fa-quote-left testimonial-icon" style="color: #00C9FF;"></i>
+                <p class="testimonial-text">I've been using Al Karama Cleaning Co. for my home cleaning and they always do a fantastic job. Highly recommended!</p>
+                <p class="testimonial-reviewer">Khalid Hassan, Dubai</p>
+            </div>
         </div>
-        <form class="contact-form">
-            <input type="text" placeholder="Name" class="contact-input">
-            <input type="tel" placeholder="Phone" class="contact-input">
-            <select class="contact-input">
-                <option value="residential">Residential Cleaning</option>
-                <option value="commercial">Commercial Cleaning</option>
-                <option value="industrial">Industrial Cleaning</option>
-                <option value="move-in-move-out">Move-in/Move-out Cleaning</option>
-                <option value="deep-cleaning">Deep Cleaning</option>
-                <option value="special-event-cleaning">Special Event Cleaning</option>
-            </select>
-            <textarea placeholder="Message" class="contact-input"></textarea>
-            <button class="contact-button">Submit</button>
-        </form>
     </section>
-    <button class="wa-button" onclick="window.location.href='https://wa.me/971501234567'"><i class="fa-brands fa-whatsapp"></i></button>
-    <footer class="footer">
-        <p>Copyright 2026 Al Karama Cleaning Co. All Rights Reserved.</p>
-        <p><a href="#" style="color: #00C9FF;">Al Karama Cleaning Co</a> | Cleaning Solutions at Your Doorstep</p>
-    </footer>
-    <script>
-        // Intersection Observer JS snippet for scroll reveal
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate');
-                }
-            });
-        }, { threshold: 0.5 });
-        const elements = document.querySelectorAll('.animate');
-        elements.forEach((element) => {
-            observer.observe(element);
-        });
-    </script>
-</body>
-</html>
-```
+    <section class="contact" id="contact">
+        <div class="contact-info">
+            <h2 style="color: #E8F4F8; font-size: 24px; margin-bottom: 2rem;">Get in Touch</h2>
+            <p class="contact-phone">Phone: +971 501 234 567</p>
+            <p class="contact-email">Email: <a href="mailto:info@alkaramacleaning.co">info@alkaramacleaning.co</a></p>
+            <a class="contact-whatsapp" href="https://wa.me/971501234567">WhatsApp Us</a>
+        </div>
+        <div
