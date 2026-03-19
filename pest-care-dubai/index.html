@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pest Care Dubai</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .primary-color {
+            color: #34C759;
+        }
+        .secondary-color {
+            color: #F7F7F7;
+        }
+        .accent-color {
+            color: #FFC107;
+        }
+        nav {
+            background-color: #34C759;
+            color: #F7F7F7;
+            padding: 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+        nav a {
+            color: #F7F7F7;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1920x1080');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #F7F7F7;
+        }
+        .hero h1 {
+            font-size: 3rem;
+        }
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            padding: 2rem;
+        }
+        .service {
+            background-color: #F7F7F7;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 0.5rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .service i {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        .about {
+            display: flex;
+            justify-content: space-between;
+            padding: 2rem;
+        }
+        .about-text {
+            width: 60%;
+        }
+        .about-stats {
+            width: 30%;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+        .about-stat {
+            background-color: #F7F7F7;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 0.5rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .contact {
+            display: flex;
+            justify-content: space-between;
+            padding: 2rem;
+        }
+        .contact-info {
+            width: 40%;
+        }
+        .contact-form {
+            width: 50%;
+        }
+        .whatsapp-button {
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            background-color: #34C759;
+            color: #F7F7F7;
+            padding: 1rem;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        footer {
+            background-color: #34C759;
+            color: #F7F7F7;
+            padding: 1rem;
+            text-align: center;
+        }
+        @media only screen and (max-width: 768px) {
+            .services {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .about {
+                flex-direction: column;
+            }
+            .about-text {
+                width: 100%;
+            }
+            .about-stats {
+                width: 100%;
+            }
+            .contact {
+                flex-direction: column;
+            }
+            .contact-info {
+                width: 100%;
+            }
+            .contact-form {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="home" class="hero">
+        <h1>Protect Your Space, Naturally</h1>
+        <p>We provide professional pest control and management services in Dubai.</p>
+        <a href="https://wa.me/971552051234" class="primary-color">WhatsApp Us</a>
+    </section>
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="service">
+                <i class="fa-solid fa-bug"></i>
+                <h3>Pest Control</h3>
+                <p>Elimination of pests from homes and businesses. Our team uses the latest technology and techniques to ensure effective pest control.</p>
+            </div>
+            <div class="service">
+                <i class="fa-solid fa-chart-line"></i>
+                <h3>Pest Management</h3>
+                <p>Long-term prevention and control of pest infestations. We offer customized pest management plans to suit your needs.</p>
+            </div>
+            <div class="service">
+                <i class="fa-solid fa-rat"></i>
+                <h3>Rodent Control</h3>
+                <p>Control and elimination of rodents from properties. Our team is equipped to handle rodent infestations of any size.</p>
+            </div>
+            <div class="service">
+                <i class="fa-solid fa-house"></i>
+                <h3>Termite Control</h3>
+                <p>Prevention and treatment of termite infestations. We offer effective termite control solutions to protect your home or business.</p>
+            </div>
+            <div class="service">
+                <i class="fa-solid fa-bed"></i>
+                <h3>Bed Bug Control</h3>
+                <p>Elimination of bed bugs from homes and businesses. Our team uses specialized equipment and techniques to ensure effective bed bug control.</p>
+            </div>
+            <div class="service">
+                <i class="fa-solid fa-smoke"></i>
+                <h3>Fumigation Services</h3>
+                <p>Complete fumigation of properties to eliminate pests. We offer fumigation services for homes, businesses, and industrial properties.</p>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <h2>About Us</h2>
+        <div class="about">
+            <div class="about-text">
+                <p>Pest Care Dubai is a professional pest control and management services company located in Al Karama, Dubai. Our team is dedicated to providing effective and reliable pest control solutions to homes and businesses in Dubai.</p>
+                <p>We use the latest technology and techniques to ensure that our services are not only effective but also safe for the environment and human health. Our team is committed to providing excellent customer service and ensuring that our clients are satisfied with our services.</p>
+            </div>
+            <div class="about-stats">
+                <div class="about-stat">
+                    <h3>10+ Years Experience</h3>
+                </div>
+                <div class="about-stat">
+                    <h3>1000+ Satisfied Clients</h3>
+                </div>
+                <div class="about-stat">
+                    <h3>24/7 Emergency Services</h3>
+                </div>
+                <div class="about-stat">
+                    <h3>Professional and Insured Team</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Get in Touch</h2>
+        <div class="contact">
+            <div class="contact-info">
+                <p>Phone: +971552051234</p>
+                <p>Email: <a href="mailto:info@pestcaredubai.com">info@pestcaredubai.com</a></p>
+                <p>Address: Al Karama, Dubai</p>
+            </div>
+            <div class="contact-form">
+                <form>
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                    <textarea placeholder="Message"></textarea>
+                    <button>Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <button class="whatsapp-button" onclick="window.location.href='https://wa.me/971552051234'">WhatsApp Us</button>
+    <footer>
+        <p>Pest Care Dubai &copy; 2026 All rights reserved.</p>
+        <p>Phone: +971552051234</p>
+    </footer>
+</body>
+</html>
+```
