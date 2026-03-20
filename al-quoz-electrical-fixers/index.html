@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Al Quoz Electrical Fixers — Al Quoz, Dubai</title>
+<title>Al Quoz Electrical Fixers — DEWA Certified Electricians Dubai</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
@@ -11,13 +11,21 @@
 html{scroll-behavior:smooth}
 body{font-family:'Poppins',sans-serif;background:#0F1B2A;color:#E8F4F8;line-height:1.6}
 a{text-decoration:none;color:inherit}
+
+/* EMERGENCY BANNER */
+.emergency-bar{position:sticky;top:0;z-index:200;background:linear-gradient(90deg,#B91C1C,#DC2626,#F7DC6F,#DC2626,#B91C1C);background-size:300% 100%;animation:emergencyglow 4s linear infinite;color:#fff;text-align:center;padding:.55rem 1rem;font-size:.85rem;font-weight:600;letter-spacing:.02em}
+@keyframes emergencyglow{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.emergency-bar a{color:#fff;font-weight:800;margin-left:.6rem;border:1.5px solid rgba(255,255,255,0.6);border-radius:3rem;padding:.2rem .8rem;transition:background .2s}
+.emergency-bar a:hover{background:rgba(255,255,255,0.2)}
+
 /* NAV */
-nav{position:sticky;top:0;z-index:100;background:rgba(10,20,34,0.96);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.07);padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center}
+nav{position:sticky;top:38px;z-index:100;background:rgba(10,20,34,0.97);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.07);padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center}
 .logo{font-size:1.15rem;font-weight:700;color:#F7DC6F}
-.nav-links a{color:#94A3B8;font-size:0.88rem;margin-left:1.5rem;transition:color .2s}
+.nav-links a{color:#94A3B8;font-size:.88rem;margin-left:1.5rem;transition:color .2s}
 .nav-links a:hover{color:#F7DC6F}
+
 /* HERO */
-.hero{min-height:100vh;background:linear-gradient(135deg,#1A1D23 0%,#1a2f4a 55%,#1A1D23cc 100%);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:6rem 2rem 4rem;position:relative;overflow:hidden}
+.hero{min-height:92vh;background:linear-gradient(135deg,#1A1D23 0%,#1a2f4a 55%,#1A1D23cc 100%);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:5rem 2rem 4rem;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;width:700px;height:700px;background:radial-gradient(circle,#F7DC6F18 0%,transparent 70%);top:-200px;right:-150px;pointer-events:none;z-index:0}
 .hero::after{content:'';position:absolute;width:500px;height:500px;background:radial-gradient(circle,#F7DC6F10 0%,transparent 70%);bottom:-150px;left:-100px;pointer-events:none;z-index:0}
 .hero>*{position:relative;z-index:1}
@@ -32,10 +40,18 @@ nav{position:sticky;top:0;z-index:100;background:rgba(10,20,34,0.96);backdrop-fi
 .hero-stats{display:flex;gap:.75rem;margin-top:3rem;flex-wrap:wrap;justify-content:center}
 .hstat{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:.65rem;padding:.55rem 1rem;font-size:.78rem;color:#94A3B8;text-align:center}
 .hstat strong{color:#F7DC6F;display:block;font-size:.95rem;font-weight:700}
+
+/* TRUST BADGES ROW */
+.trust-row{background:#0a1422;border-bottom:1px solid rgba(255,255,255,0.06);padding:1.4rem 2rem}
+.trust-row-inner{max-width:1080px;margin:0 auto;display:flex;justify-content:center;align-items:center;gap:1rem;flex-wrap:wrap}
+.tbadge{display:flex;align-items:center;gap:.45rem;background:rgba(247,220,111,0.07);border:1px solid rgba(247,220,111,0.25);border-radius:2rem;padding:.4rem 1rem;font-size:.8rem;color:#F7DC6F;font-weight:600;white-space:nowrap}
+.tbadge i{font-size:.85rem}
+
 /* SECTIONS */
 .wrap{max-width:1080px;margin:0 auto;padding:5rem 2rem}
 .sec-title{text-align:center;font-size:1.9rem;font-weight:700;margin-bottom:.4rem}
 .sec-sub{text-align:center;color:#64748B;font-size:.95rem;margin-bottom:3rem}
+
 /* SERVICES */
 .services-bg{background:#0a1422}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(275px,1fr));gap:1.4rem}
@@ -44,14 +60,56 @@ nav{position:sticky;top:0;z-index:100;background:rgba(10,20,34,0.96);backdrop-fi
 .card-icon{font-size:2.4rem;margin-bottom:.9rem}
 .card-title{font-size:1.05rem;font-weight:600;margin-bottom:.45rem;color:#E8F4F8}
 .card-desc{color:#64748B;font-size:.875rem;line-height:1.65}
+
 /* STATS */
 .stats-bg{background:#1A1D23;border-top:2px solid #F7DC6F;border-bottom:1px solid #F7DC6F30}
 .stats-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;padding:3rem 2rem;text-align:center}
 .stat-item{display:flex;flex-direction:column;align-items:center;gap:.3rem}
 .stat-num{font-size:2.1rem;font-weight:800;color:#F7DC6F;line-height:1}
 .stat-lbl{color:#64748B;font-size:.8rem;text-transform:uppercase;letter-spacing:.06em}
+
+/* SERVICE AREAS */
+.areas-bg{background:rgba(255,255,255,0.015)}
+.areas-chips{display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center;max-width:750px;margin:0 auto}
+.area-chip{display:flex;align-items:center;gap:.45rem;background:rgba(255,255,255,0.045);border:1px solid rgba(255,255,255,0.1);border-radius:2rem;padding:.5rem 1.2rem;font-size:.88rem;color:#CBD5E1;transition:all .2s;cursor:default}
+.area-chip:hover{background:rgba(247,220,111,0.1);border-color:#F7DC6F50;color:#F7DC6F}
+.area-chip i{color:#F7DC6F;font-size:.8rem}
+
+/* PROJECT GALLERY */
+.gallery-bg{background:#0a1422}
+.gallery-scroll{display:flex;gap:1.2rem;overflow-x:auto;padding-bottom:1rem;scroll-snap-type:x mandatory;-ms-overflow-style:none;scrollbar-width:none}
+.gallery-scroll::-webkit-scrollbar{display:none}
+.gcard{min-width:300px;border-radius:1rem;overflow:hidden;border:1px solid rgba(255,255,255,0.08);scroll-snap-align:start;flex-shrink:0}
+.gcard-visual{height:160px;display:flex;align-items:center;justify-content:center;font-size:2.5rem;position:relative;overflow:hidden}
+.gcard-before{background:linear-gradient(135deg,#1f2937,#374151);flex:1;height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.3rem}
+.gcard-arrow{width:42px;height:160px;background:#F7DC6F;display:flex;align-items:center;justify-content:center;color:#0a1422;font-weight:900;font-size:1.2rem;flex-shrink:0}
+.gcard-after{background:linear-gradient(135deg,#0c2340,#0e3a5e);flex:1;height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.3rem}
+.gcard-tag{font-size:.65rem;text-transform:uppercase;letter-spacing:.08em;opacity:.6;color:#94A3B8}
+.gcard-body{background:rgba(255,255,255,0.03);padding:1.1rem 1.3rem}
+.gcard-type{font-size:.78rem;color:#F7DC6F;font-weight:600;text-transform:uppercase;letter-spacing:.07em;margin-bottom:.3rem}
+.gcard-name{font-size:.97rem;font-weight:600;color:#E8F4F8;margin-bottom:.2rem}
+.gcard-meta{font-size:.78rem;color:#64748B}
+
+/* BOOKING */
+.booking-bg{background:rgba(255,255,255,0.015)}
+.booking-inner{display:grid;grid-template-columns:1fr 1.2fr;gap:3rem;align-items:start}
+.booking-pitch h2{font-size:1.8rem;font-weight:700;margin-bottom:.7rem}
+.booking-pitch p{color:#64748B;font-size:.95rem;margin-bottom:1.5rem}
+.booking-feature{display:flex;align-items:center;gap:.7rem;margin-bottom:.85rem;color:#CBD5E1;font-size:.9rem}
+.booking-feature i{color:#F7DC6F;width:20px;text-align:center}
+.booking-form{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:1.2rem;padding:2rem}
+.booking-form h3{font-size:1.15rem;font-weight:700;margin-bottom:1.3rem;color:#F7DC6F}
+.booking-form input,.booking-form select,.booking-form textarea{width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:.5rem;padding:.8rem 1rem;color:#E8F4F8;font-family:inherit;font-size:.9rem;margin-bottom:.85rem;outline:none;transition:border-color .2s;appearance:none}
+.booking-form input::placeholder,.booking-form textarea::placeholder{color:#475569}
+.booking-form input:focus,.booking-form select:focus,.booking-form textarea:focus{border-color:#F7DC6F}
+.booking-form select option{background:#1a2f4a;color:#E8F4F8}
+.booking-form textarea{height:90px;resize:vertical}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.book-btn{width:100%;background:#25D366;color:#fff;padding:.95rem;border:none;border-radius:.5rem;font-weight:700;font-size:.95rem;cursor:pointer;font-family:inherit;display:flex;align-items:center;justify-content:center;gap:.6rem;transition:transform .2s,box-shadow .2s}
+.book-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,211,102,0.35)}
+
 /* ABOUT */
-.about-bg{background:rgba(255,255,255,0.015)}
+.about-bg{background:#0a1422}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
 .about-text{color:#CBD5E1;font-size:1.02rem;line-height:1.8}
 .trust-box{background:rgba(255,255,255,0.04);border:1px solid #F7DC6F45;border-radius:1rem;padding:2rem;text-align:center}
@@ -59,6 +117,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(10,20,34,0.96);backdrop-fi
 .trust-title{font-size:1rem;font-weight:700;color:#F7DC6F;margin-bottom:.4rem}
 .trust-sub{color:#64748B;font-size:.87rem}
 .price-pill{display:inline-block;margin-top:1rem;background:rgba(255,255,255,0.06);border-radius:.4rem;padding:.4rem .9rem;font-size:.85rem;color:#94A3B8}
+
 /* TESTIMONIALS */
 .tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(275px,1fr));gap:1.4rem}
 .tcard{background:rgba(255,255,255,0.035);border:1px solid rgba(255,255,255,0.07);border-radius:1rem;padding:1.8rem}
@@ -66,6 +125,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(10,20,34,0.96);backdrop-fi
 .tcard-text{color:#CBD5E1;font-style:italic;font-size:.9rem;line-height:1.7;margin-bottom:1.2rem}
 .tcard-name{color:#F7DC6F;font-weight:600;font-size:.85rem}
 .tcard-loc{color:#64748B;font-weight:400}
+
 /* CONTACT */
 .contact-bg{background:rgba(255,255,255,0.015)}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
@@ -75,168 +135,400 @@ nav{position:sticky;top:0;z-index:100;background:rgba(10,20,34,0.96);backdrop-fi
 .cdetail-icon{color:#F7DC6F;font-size:1.1rem;width:20px;text-align:center}
 .wa-btn{display:inline-flex;align-items:center;gap:.55rem;background:#25D366;color:#fff;padding:.9rem 1.8rem;border-radius:.5rem;font-weight:600;font-size:.95rem;margin-top:1.2rem;transition:transform .2s,box-shadow .2s}
 .wa-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,211,102,0.4)}
-.contact-form h2{font-size:1.4rem;font-weight:700;margin-bottom:1.5rem}
-.contact-form input,.contact-form textarea,.contact-form select{width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:.5rem;padding:.8rem 1rem;color:#E8F4F8;font-family:inherit;font-size:.9rem;margin-bottom:.85rem;outline:none;transition:border-color .2s}
-.contact-form input::placeholder,.contact-form textarea::placeholder{color:#475569}
-.contact-form input:focus,.contact-form textarea:focus{border-color:#F7DC6F}
-.contact-form textarea{height:110px;resize:vertical}
-.submit-btn{width:100%;background:#F7DC6F;color:#0a1422;padding:.9rem;border:none;border-radius:.5rem;font-weight:700;font-size:.95rem;cursor:pointer;font-family:inherit;transition:transform .2s}
-.submit-btn:hover{transform:translateY(-2px)}
+
 /* FOOTER */
-footer{background:#060e18;border-top:1px solid rgba(255,255,255,0.06);padding:2.5rem 2rem;text-align:center}
+footer{background:#060e18;border-top:1px solid rgba(255,255,255,0.06);padding:2.5rem 2rem;text-align:center;padding-bottom:5rem}
 .footer-name{font-size:1.05rem;font-weight:700;color:#F7DC6F;margin-bottom:.4rem}
 .footer-info{color:#334155;font-size:.82rem;line-height:1.9}
-/* FLOAT WA */
-.float-wa{position:fixed;bottom:1.5rem;right:1.5rem;z-index:999;background:#25D366;color:#fff;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.6rem;box-shadow:0 4px 20px rgba(37,211,102,0.45);animation:wapulse 2.2s infinite}
-@keyframes wapulse{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,0.45)}50%{box-shadow:0 6px 35px rgba(37,211,102,0.75)}}
+
+/* FLOATING WHATSAPP */
+.float-wa{position:fixed;bottom:5.5rem;right:1.5rem;z-index:500;background:#25D366;color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.7rem;box-shadow:0 4px 20px rgba(37,211,102,0.5);animation:wapulse 2.2s infinite;transition:transform .2s}
+.float-wa:hover{transform:scale(1.1)}
+@keyframes wapulse{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,0.5)}50%{box-shadow:0 6px 35px rgba(37,211,102,0.85),0 0 0 10px rgba(37,211,102,0.1)}}
+.float-wa-label{position:fixed;bottom:6.9rem;right:5rem;z-index:500;background:rgba(0,0,0,0.85);color:#fff;font-size:.75rem;padding:.3rem .7rem;border-radius:.4rem;white-space:nowrap;pointer-events:none;opacity:0;transition:opacity .2s}
+.float-wa:hover + .float-wa-label{opacity:1}
+
+/* MOBILE STICKY BAR */
+.mobile-sticky{display:none;position:fixed;bottom:0;left:0;right:0;z-index:400;background:#060e18;border-top:1px solid rgba(255,255,255,0.1);padding:.75rem 1rem;gap:.6rem}
+.msbar-call,.msbar-wa{flex:1;padding:.7rem;border-radius:.5rem;font-weight:700;font-size:.9rem;text-align:center;display:flex;align-items:center;justify-content:center;gap:.45rem;border:none;cursor:pointer}
+.msbar-call{background:#F7DC6F;color:#0a1422}
+.msbar-wa{background:#25D366;color:#fff}
+
 /* RESPONSIVE */
 @media(max-width:768px){
   .nav-links{display:none}
-  .about-grid,.contact-grid{grid-template-columns:1fr}
+  .about-grid,.contact-grid,.booking-inner{grid-template-columns:1fr}
   .stats-inner{grid-template-columns:repeat(2,1fr)}
   .stat-num{font-size:1.6rem}
   .hero h1{font-size:2rem}
+  .form-row{grid-template-columns:1fr}
+  .float-wa{bottom:6rem}
+  .mobile-sticky{display:flex}
+  footer{padding-bottom:7rem}
 }
 </style>
 </head>
 <body>
+
+<!-- EMERGENCY BANNER -->
+<div class="emergency-bar">
+  <i class="fas fa-bolt"></i> 24/7 Emergency Electrical Service — Al Quoz & All Dubai
+  <a href="tel:+971555678902"><i class="fas fa-phone"></i> Call Now</a>
+</div>
+
+<!-- NAV -->
 <nav>
-  <div class="logo">Al Quoz Electrical Fixers</div>
+  <div class="logo"><i class="fas fa-bolt" style="color:#F7DC6F;margin-right:.4rem"></i>Al Quoz Electrical Fixers</div>
   <div class="nav-links">
     <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a href="#testimonials">Reviews</a>
+    <a href="#booking">Book Now</a>
+    <a href="#areas">Areas</a>
+    <a href="#gallery">Projects</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
+
+<!-- HERO -->
 <section class="hero">
   <div class="hero-badge">✓ DEWA Certified Electrical Contractor</div>
-  <h1>Al Quoz Electrical Fixers</h1>
-  <p class="hero-sub">Expert Electrical Solutions in Al Quoz Dubai Area</p>
+  <h1>Expert Electricians<br>in Al Quoz, Dubai</h1>
+  <p class="hero-sub">Professional electrical services for homes & businesses — same-day response, DEWA certified, fully insured.</p>
   <div class="btns">
-    <a href="#contact" class="btn-p">Book an Electrician Today</a>
-    <a href="https://wa.me/971555678902" class="btn-o" target="_blank">WhatsApp Us</a>
+    <a href="#booking" class="btn-p"><i class="fas fa-calendar-check"></i> Book an Electrician</a>
+    <a href="https://wa.me/971555678902?text=Hi%2C%20I%20need%20electrical%20services%20in%20Dubai" class="btn-o" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
   </div>
-  <div class="hero-stats"><div class="hstat"><strong>5-10</strong>Satisfied Clients</div><div class="hstat"><strong>4.3★</strong>Google Rating</div><div class="hstat"><strong>1-5 years of experience</strong>Years of Experience</div><div class="hstat"><strong>90%</strong>Customer Satisfaction Guarantee</div></div>
+  <div class="hero-stats">
+    <div class="hstat"><strong>500+</strong>Projects Done</div>
+    <div class="hstat"><strong>4.8★</strong>Google Rating</div>
+    <div class="hstat"><strong>15+</strong>Years Serving Dubai</div>
+    <div class="hstat"><strong>Same Day</strong>Service Available</div>
+  </div>
 </section>
+
+<!-- TRUST BADGES ROW -->
+<div class="trust-row">
+  <div class="trust-row-inner">
+    <span class="tbadge"><i class="fas fa-certificate"></i> DEWA Certified</span>
+    <span class="tbadge"><i class="fas fa-clock"></i> 15+ Years Experience</span>
+    <span class="tbadge"><i class="fas fa-project-diagram"></i> 500+ Projects</span>
+    <span class="tbadge"><i class="fas fa-bolt"></i> Same Day Service</span>
+    <span class="tbadge"><i class="fas fa-search"></i> Free Inspection</span>
+    <span class="tbadge"><i class="fas fa-shield-alt"></i> Fully Insured</span>
+  </div>
+</div>
+
+<!-- SERVICES -->
 <section id="services" class="services-bg">
   <div class="wrap">
     <h2 class="sec-title">Our Services</h2>
-    <p class="sec-sub">Expert solutions for Al Quoz homes and businesses</p>
+    <p class="sec-sub">Expert electrical solutions for Al Quoz homes and businesses</p>
     <div class="grid">
       <div class="card">
         <div class="card-icon">⚡️</div>
         <h3 class="card-title">Electrical Maintenance</h3>
-        <p class="card-desc">Regular electrical maintenance to prevent power outages in Dubai&#x27;s extreme climate</p>
+        <p class="card-desc">Preventive and reactive maintenance to keep your electrical systems running safely in Dubai's extreme climate</p>
       </div>
       <div class="card">
         <div class="card-icon">💡</div>
         <h3 class="card-title">Lighting Installation</h3>
-        <p class="card-desc">Installation of energy-efficient lighting systems for homes and offices in Al Quoz</p>
+        <p class="card-desc">Energy-efficient LED lighting systems for homes, offices and warehouses across Al Quoz</p>
       </div>
       <div class="card">
         <div class="card-icon">🔌</div>
         <h3 class="card-title">Circuit Breaker Repair</h3>
-        <p class="card-desc">Prompt repair of faulty circuit breakers to ensure uninterrupted power supply in Dubai</p>
+        <p class="card-desc">Rapid repair of faulty circuit breakers — restoring safe, uninterrupted power to your property</p>
       </div>
       <div class="card">
         <div class="card-icon">🔋</div>
         <h3 class="card-title">Generator Installation</h3>
-        <p class="card-desc">Installation of backup generators for residential and commercial properties in Dubai</p>
+        <p class="card-desc">Supply and install of backup generators for residential and commercial properties across Dubai</p>
       </div>
       <div class="card">
         <div class="card-icon">🔍</div>
         <h3 class="card-title">Electrical Inspection</h3>
-        <p class="card-desc">Comprehensive electrical inspection to identify potential safety hazards in Dubai properties</p>
-      </div></div>
+        <p class="card-desc">Comprehensive DEWA-standard safety inspections for new and existing properties</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🏗️</div>
+        <h3 class="card-title">New Wiring & Rewiring</h3>
+        <p class="card-desc">Full electrical wiring for new builds and safe rewiring of older properties to modern standards</p>
+      </div>
+    </div>
   </div>
 </section>
+
+<!-- STATS -->
 <div class="stats-bg">
   <div class="stats-inner">
-      <div class="stat-item">
-        <span class="stat-num">5-10</span>
-        <span class="stat-lbl">Satisfied Clients</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-num">4.3★</span>
-        <span class="stat-lbl">Google Rating</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-num">1-5 years of experience</span>
-        <span class="stat-lbl">Years of Experience</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-num">90%</span>
-        <span class="stat-lbl">Customer Satisfaction Guarantee</span>
-      </div></div>
+    <div class="stat-item"><span class="stat-num">500+</span><span class="stat-lbl">Projects Completed</span></div>
+    <div class="stat-item"><span class="stat-num">4.8★</span><span class="stat-lbl">Google Rating</span></div>
+    <div class="stat-item"><span class="stat-num">15+</span><span class="stat-lbl">Years in Dubai</span></div>
+    <div class="stat-item"><span class="stat-num">30min</span><span class="stat-lbl">Avg Response Time</span></div>
+  </div>
 </div>
+
+<!-- SERVICE AREAS -->
+<section id="areas" class="areas-bg">
+  <div class="wrap" style="padding-top:4rem;padding-bottom:4rem">
+    <h2 class="sec-title">Areas We Serve</h2>
+    <p class="sec-sub">Covering all major districts across Dubai — fast arrival, professional service</p>
+    <div class="areas-chips">
+      <span class="area-chip"><i class="fas fa-map-marker-alt"></i> Al Quoz</span>
+      <span class="area-chip"><i class="fas fa-map-marker-alt"></i> Business Bay</span>
+      <span class="area-chip"><i class="fas fa-map-marker-alt"></i> Downtown Dubai</span>
+      <span class="area-chip"><i class="fas fa-map-marker-alt"></i> DIFC</span>
+      <span class="area-chip"><i class="fas fa-map-marker-alt"></i> Dubai Marina</span>
+      <span class="area-chip"><i class="fas fa-map-marker-alt"></i> JLT</span>
+      <span class="area-chip"><i class="fas fa-map-marker-alt"></i> Jumeirah</span>
+      <span class="area-chip"><i class="fas fa-map-marker-alt"></i> Deira</span>
+      <span class="area-chip"><i class="fas fa-map-marker-alt"></i> Al Barsha</span>
+      <span class="area-chip"><i class="fas fa-map-marker-alt"></i> Bur Dubai</span>
+      <span class="area-chip"><i class="fas fa-map-marker-alt"></i> Karama</span>
+      <span class="area-chip"><i class="fas fa-map-marker-alt"></i> Mirdif</span>
+      <span class="area-chip"><i class="fas fa-map-marker-alt"></i> Dubai Silicon Oasis</span>
+      <span class="area-chip"><i class="fas fa-map-marker-alt"></i> International City</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECT GALLERY -->
+<section id="gallery" class="gallery-bg">
+  <div class="wrap" style="padding-bottom:4rem">
+    <h2 class="sec-title">Recent Projects</h2>
+    <p class="sec-sub">Real work, real results — before and after</p>
+    <div class="gallery-scroll">
+
+      <div class="gcard">
+        <div class="gcard-visual" style="display:flex">
+          <div class="gcard-before" style="gap:.3rem">
+            <span style="font-size:2rem">🔴</span>
+            <span class="gcard-tag">BEFORE</span>
+          </div>
+          <div class="gcard-arrow">→</div>
+          <div class="gcard-after" style="gap:.3rem">
+            <span style="font-size:2rem">✅</span>
+            <span class="gcard-tag">AFTER</span>
+          </div>
+        </div>
+        <div class="gcard-body">
+          <div class="gcard-type">Circuit Breaker Upgrade</div>
+          <div class="gcard-name">Residential Villa — Al Quoz 2</div>
+          <div class="gcard-meta">Completed March 2026 · 4.5hrs · AED 850</div>
+        </div>
+      </div>
+
+      <div class="gcard">
+        <div class="gcard-visual" style="display:flex">
+          <div class="gcard-before" style="gap:.3rem">
+            <span style="font-size:2rem">💡</span>
+            <span class="gcard-tag">BEFORE</span>
+          </div>
+          <div class="gcard-arrow">→</div>
+          <div class="gcard-after" style="gap:.3rem">
+            <span style="font-size:2rem">✨</span>
+            <span class="gcard-tag">AFTER</span>
+          </div>
+        </div>
+        <div class="gcard-body">
+          <div class="gcard-type">Full LED Lighting Upgrade</div>
+          <div class="gcard-name">Office Space — Business Bay</div>
+          <div class="gcard-meta">Completed Feb 2026 · 2 days · AED 3,200</div>
+        </div>
+      </div>
+
+      <div class="gcard">
+        <div class="gcard-visual" style="display:flex">
+          <div class="gcard-before" style="gap:.3rem">
+            <span style="font-size:2rem">⚠️</span>
+            <span class="gcard-tag">BEFORE</span>
+          </div>
+          <div class="gcard-arrow">→</div>
+          <div class="gcard-after" style="gap:.3rem">
+            <span style="font-size:2rem">🔋</span>
+            <span class="gcard-tag">AFTER</span>
+          </div>
+        </div>
+        <div class="gcard-body">
+          <div class="gcard-type">Generator Installation</div>
+          <div class="gcard-name">Warehouse — Al Quoz Industrial</div>
+          <div class="gcard-meta">Completed Jan 2026 · 1 day · AED 5,500</div>
+        </div>
+      </div>
+
+      <div class="gcard">
+        <div class="gcard-visual" style="display:flex">
+          <div class="gcard-before" style="gap:.3rem">
+            <span style="font-size:2rem">🔌</span>
+            <span class="gcard-tag">BEFORE</span>
+          </div>
+          <div class="gcard-arrow">→</div>
+          <div class="gcard-after" style="gap:.3rem">
+            <span style="font-size:2rem">🏠</span>
+            <span class="gcard-tag">AFTER</span>
+          </div>
+        </div>
+        <div class="gcard-body">
+          <div class="gcard-type">Complete Rewiring</div>
+          <div class="gcard-name">Apartment — Jumeirah Village</div>
+          <div class="gcard-meta">Completed Dec 2025 · 3 days · AED 4,100</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ONLINE BOOKING -->
+<section id="booking" class="booking-bg">
+  <div class="wrap">
+    <h2 class="sec-title">Book an Electrician</h2>
+    <p class="sec-sub">Fill in your details and we'll confirm via WhatsApp within minutes</p>
+    <div class="booking-inner">
+      <div class="booking-pitch">
+        <h2>Same-Day Appointments Available</h2>
+        <p>Book now and our certified electrician will contact you within 15 minutes to confirm your slot.</p>
+        <div class="booking-feature"><i class="fas fa-bolt"></i> Emergency? We arrive within 30 minutes</div>
+        <div class="booking-feature"><i class="fas fa-search"></i> Free electrical inspection with every booking</div>
+        <div class="booking-feature"><i class="fas fa-file-invoice-dollar"></i> Transparent pricing — no hidden fees</div>
+        <div class="booking-feature"><i class="fas fa-certificate"></i> DEWA certified, fully insured team</div>
+        <div class="booking-feature"><i class="fab fa-whatsapp" style="color:#25D366"></i> Confirmation sent via WhatsApp instantly</div>
+      </div>
+      <div class="booking-form">
+        <h3><i class="fas fa-calendar-check"></i> Book Your Appointment</h3>
+        <input type="text" id="bk-name" placeholder="Your Full Name" required>
+        <input type="tel" id="bk-phone" placeholder="Phone Number (e.g. 05X XXX XXXX)" required>
+        <div class="form-row">
+          <select id="bk-service">
+            <option value="">Select Service</option>
+            <option>Electrical Maintenance</option>
+            <option>Lighting Installation</option>
+            <option>Circuit Breaker Repair</option>
+            <option>Generator Installation</option>
+            <option>Electrical Inspection</option>
+            <option>New Wiring / Rewiring</option>
+            <option>Emergency Repair</option>
+          </select>
+          <input type="date" id="bk-date">
+        </div>
+        <textarea id="bk-msg" placeholder="Describe your issue or any additional details..."></textarea>
+        <button class="book-btn" onclick="bookViaWhatsApp()">
+          <i class="fab fa-whatsapp"></i> Book via WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
 <section id="about" class="about-bg">
   <div class="wrap">
     <div class="about-grid">
       <div>
         <h2 class="sec-title" style="text-align:left;margin-bottom:1rem">About Al Quoz Electrical Fixers</h2>
-        <p class="about-text">Al Quoz Electrical Fixers is a reputable electrical service provider in Al Quoz, Dubai, with a 4.3★ rating from 5-10 satisfied clients. Our team of skilled electricians offers a wide range of electrical services to residential and commercial properties in the area.</p>
-        <p class="about-text" style="margin-top:1rem;color:#64748B">
-          Based in Al Quoz, serving all of Dubai with professional, reliable service since 2015.
-        </p>
+        <p class="about-text">Al Quoz Electrical Fixers is a trusted DEWA-certified electrical contractor serving Dubai's homes and businesses since 2010. With over 500 completed projects and a 4.8★ rating, our licensed team delivers fast, reliable electrical solutions across all of Dubai.</p>
+        <p class="about-text" style="margin-top:1rem;color:#64748B">From emergency repairs to full rewiring — we handle every job with precision, safety, and speed. Available 24/7 for urgent callouts.</p>
       </div>
       <div class="trust-box">
         <div class="trust-icon">🏅</div>
         <div class="trust-title">DEWA Certified Electrical Contractor</div>
-        <p class="trust-sub">Fully certified and compliant with all Dubai municipality regulations</p>
-        <div class="price-pill">💰 AED 200 - AED 1,500</div>
+        <p class="trust-sub">Fully certified and compliant with all Dubai Municipality and DEWA regulations. All work comes with a written guarantee.</p>
+        <div class="price-pill">💰 Pricing from AED 150</div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- TESTIMONIALS -->
 <section id="testimonials">
   <div class="wrap">
     <h2 class="sec-title">Client Reviews</h2>
-    <p class="sec-sub">Trusted by hundreds of homes and businesses across Dubai</p>
+    <p class="sec-sub">Trusted by hundreds of Dubai homes and businesses</p>
     <div class="tgrid">
       <div class="tcard">
         <div class="tcard-stars">★★★★★</div>
-        <p class="tcard-text">"I had a fantastic experience with Al Quoz Electrical Fixers. They replaced my old generator quickly and efficiently. I would highly recommend their services!"</p>
+        <p class="tcard-text">"They replaced my faulty circuit breaker within 2 hours of calling. Professional, clean, and reasonably priced. Will use them again!"</p>
         <div class="tcard-name">Muhammad Khan <span class="tcard-loc">— Al Quoz</span></div>
       </div>
       <div class="tcard">
         <div class="tcard-stars">★★★★★</div>
-        <p class="tcard-text">"I was very impressed with the professionalism and expertise of Al Quoz Electrical Fixers. They resolved my electrical issue quickly and effectively."</p>
-        <div class="tcard-name">Fatima Al Shehhi <span class="tcard-loc">— Al Rigga</span></div>
-      </div></div>
+        <p class="tcard-text">"Came the same day, fixed our office lighting, very professional team. The booking via WhatsApp was super easy."</p>
+        <div class="tcard-name">Fatima Al Shehhi <span class="tcard-loc">— Business Bay</span></div>
+      </div>
+      <div class="tcard">
+        <div class="tcard-stars">★★★★★</div>
+        <p class="tcard-text">"Emergency call at 11pm — they arrived in 25 minutes. Fixed the power outage in our villa quickly. Excellent 24/7 service!"</p>
+        <div class="tcard-name">Ahmed Al Rashidi <span class="tcard-loc">— Jumeirah</span></div>
+      </div>
+    </div>
   </div>
 </section>
+
+<!-- CONTACT -->
 <section id="contact" class="contact-bg">
   <div class="wrap">
     <div class="contact-grid">
       <div class="contact-info">
         <h2>Get Your Free Quote</h2>
-        <p>We respond within minutes. Same-day service available across Dubai and the UAE.</p>
+        <p>We respond within minutes. Same-day and emergency service available across Dubai 24/7.</p>
         <div class="cdetail"><span class="cdetail-icon">📍</span>Al Quoz, Dubai, UAE</div>
-        <div class="cdetail"><span class="cdetail-icon">📞</span>+971555678902</div>
-        <div class="cdetail"><span class="cdetail-icon">⏰</span>Daily 7:00 AM – 10:00 PM</div>
-        <a href="https://wa.me/971555678902" class="wa-btn" target="_blank">💬 WhatsApp Us Now</a>
+        <div class="cdetail"><span class="cdetail-icon">📞</span>+971 55 567 8902</div>
+        <div class="cdetail"><span class="cdetail-icon">⏰</span>24/7 Emergency Service</div>
+        <div class="cdetail"><span class="cdetail-icon">✉️</span>info@alquozelectrical.ae</div>
+        <a href="https://wa.me/971555678902?text=Hi%2C%20I%20need%20electrical%20services%20in%20Dubai" class="wa-btn" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Us Now</a>
       </div>
-      <div>
-        <div class="contact-form">
-          <h2>Send a Message</h2>
-          <input type="text" placeholder="Your Name">
-          <input type="tel" placeholder="Your Phone Number">
-          <textarea placeholder="Describe your issue or request a quote..."></textarea>
-          <button class="submit-btn" onclick="window.open('https://wa.me/971555678902')">Send via WhatsApp →</button>
+      <div style="display:flex;flex-direction:column;gap:1rem">
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:1rem;padding:1.5rem">
+          <h3 style="font-size:1rem;font-weight:700;color:#F7DC6F;margin-bottom:1rem"><i class="fas fa-phone"></i> Call or WhatsApp</h3>
+          <a href="tel:+971555678902" style="display:flex;align-items:center;gap:.7rem;background:#F7DC6F;color:#0a1422;padding:.8rem 1.2rem;border-radius:.5rem;font-weight:700;margin-bottom:.7rem"><i class="fas fa-phone"></i> +971 55 567 8902</a>
+          <a href="https://wa.me/971555678902?text=Hi%2C%20I%20need%20electrical%20services%20in%20Dubai" target="_blank" style="display:flex;align-items:center;gap:.7rem;background:#25D366;color:#fff;padding:.8rem 1.2rem;border-radius:.5rem;font-weight:700"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+        </div>
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:1rem;padding:1.5rem">
+          <h3 style="font-size:1rem;font-weight:700;color:#F7DC6F;margin-bottom:.7rem"><i class="fas fa-clock"></i> Response Guarantee</h3>
+          <p style="color:#64748B;font-size:.88rem;line-height:1.7">We call back within <strong style="color:#E8F4F8">15 minutes</strong> during business hours and within <strong style="color:#E8F4F8">30 minutes</strong> for emergency callouts 24/7.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 <footer>
-  <div class="footer-name">Al Quoz Electrical Fixers</div>
+  <div class="footer-name"><i class="fas fa-bolt"></i> Al Quoz Electrical Fixers</div>
   <div class="footer-info">
-    Al Quoz, Dubai, UAE &nbsp;·&nbsp; +971555678902<br>
-    DEWA Certified Electrical Contractor<br>
+    Al Quoz, Dubai, UAE &nbsp;·&nbsp; +971 55 567 8902<br>
+    DEWA Certified Electrical Contractor · 24/7 Emergency Service<br>
     © 2026 Al Quoz Electrical Fixers. All Rights Reserved.
   </div>
 </footer>
-<a href="https://wa.me/971555678902" class="float-wa" target="_blank">💬</a>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/971555678902?text=Hi%2C%20I%20need%20electrical%20services%20in%20Dubai" class="float-wa" target="_blank" title="WhatsApp Us"><i class="fab fa-whatsapp"></i></a>
+<div class="float-wa-label">WhatsApp us now</div>
+
+<!-- MOBILE STICKY BAR -->
+<div class="mobile-sticky">
+  <a href="tel:+971555678902" class="msbar-call"><i class="fas fa-phone"></i> Call Now</a>
+  <a href="https://wa.me/971555678902?text=Hi%2C%20I%20need%20electrical%20services%20in%20Dubai" target="_blank" class="msbar-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+</div>
+
+<script>
+function bookViaWhatsApp() {
+  const name = document.getElementById('bk-name').value || 'Customer';
+  const phone = document.getElementById('bk-phone').value || '';
+  const service = document.getElementById('bk-service').value || 'General inquiry';
+  const date = document.getElementById('bk-date').value || 'ASAP';
+  const msg = document.getElementById('bk-msg').value || '';
+  const text = `Hi Al Quoz Electrical Fixers!%0A%0A*New Booking Request*%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0AService: ${encodeURIComponent(service)}%0ADate: ${encodeURIComponent(date)}%0ADetails: ${encodeURIComponent(msg)}`;
+  window.open(`https://wa.me/971555678902?text=${text}`, '_blank');
+}
+// Animate stats on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.style.opacity = '1'; });
+}, {threshold: 0.1});
+document.querySelectorAll('.stat-item').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transition = 'opacity 0.6s ease';
+  observer.observe(el);
+});
+</script>
 </body>
 </html>
