@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Magic Touch AC Repair — Mirdif, Dubai</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;background:#0F1B2A;color:#E8F4F8;line-height:1.6}
+a{text-decoration:none;color:inherit}
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(10,20,34,0.96);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.07);padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:1.15rem;font-weight:700;color:#33CCFF}
+.nav-links a{color:#94A3B8;font-size:0.88rem;margin-left:1.5rem;transition:color .2s}
+.nav-links a:hover{color:#33CCFF}
+/* HERO */
+.hero{min-height:100vh;background:linear-gradient(135deg,#032B44 0%,#1a2f4a 55%,#032B44cc 100%);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:6rem 2rem 4rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;width:700px;height:700px;background:radial-gradient(circle,#33CCFF18 0%,transparent 70%);top:-200px;right:-150px;pointer-events:none;z-index:0}
+.hero::after{content:'';position:absolute;width:500px;height:500px;background:radial-gradient(circle,#33CCFF10 0%,transparent 70%);bottom:-150px;left:-100px;pointer-events:none;z-index:0}
+.hero>*{position:relative;z-index:1}
+.hero-badge{display:inline-block;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);color:#33CCFF;padding:.35rem 1.1rem;border-radius:2rem;font-size:.82rem;font-weight:500;margin-bottom:1.8rem;letter-spacing:.03em}
+.hero h1{font-size:clamp(2rem,5.5vw,3.8rem);font-weight:800;line-height:1.12;max-width:700px;margin-bottom:1rem}
+.hero-sub{font-size:1.05rem;color:#94A3B8;max-width:520px;margin-bottom:2.5rem}
+.btns{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
+.btn-p{background:#33CCFF;color:#0a1422;padding:.85rem 2rem;border-radius:.5rem;font-weight:700;font-size:.95rem;transition:transform .2s,box-shadow .2s}
+.btn-p:hover{transform:translateY(-2px);box-shadow:0 8px 28px #33CCFF55}
+.btn-o{border:2px solid rgba(255,255,255,0.35);color:#E8F4F8;padding:.85rem 2rem;border-radius:.5rem;font-weight:500;font-size:.95rem;transition:all .2s}
+.btn-o:hover{border-color:#33CCFF;color:#33CCFF}
+.hero-stats{display:flex;gap:.75rem;margin-top:3rem;flex-wrap:wrap;justify-content:center}
+.hstat{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:.65rem;padding:.55rem 1rem;font-size:.78rem;color:#94A3B8;text-align:center}
+.hstat strong{color:#33CCFF;display:block;font-size:.95rem;font-weight:700}
+/* SECTIONS */
+.wrap{max-width:1080px;margin:0 auto;padding:5rem 2rem}
+.sec-title{text-align:center;font-size:1.9rem;font-weight:700;margin-bottom:.4rem}
+.sec-sub{text-align:center;color:#64748B;font-size:.95rem;margin-bottom:3rem}
+/* SERVICES */
+.services-bg{background:#0a1422}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(275px,1fr));gap:1.4rem}
+.card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-radius:1rem;padding:1.8rem;transition:transform .25s,box-shadow .25s,border-color .25s}
+.card:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(0,0,0,0.35),0 0 0 1px #33CCFF40;border-color:#33CCFF40}
+.card-icon{font-size:2.4rem;margin-bottom:.9rem}
+.card-title{font-size:1.05rem;font-weight:600;margin-bottom:.45rem;color:#E8F4F8}
+.card-desc{color:#64748B;font-size:.875rem;line-height:1.65}
+/* STATS */
+.stats-bg{background:#032B44;border-top:2px solid #33CCFF;border-bottom:1px solid #33CCFF30}
+.stats-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;padding:3rem 2rem;text-align:center}
+.stat-item{display:flex;flex-direction:column;align-items:center;gap:.3rem}
+.stat-num{font-size:2.1rem;font-weight:800;color:#33CCFF;line-height:1}
+.stat-lbl{color:#64748B;font-size:.8rem;text-transform:uppercase;letter-spacing:.06em}
+/* ABOUT */
+.about-bg{background:rgba(255,255,255,0.015)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.about-text{color:#CBD5E1;font-size:1.02rem;line-height:1.8}
+.trust-box{background:rgba(255,255,255,0.04);border:1px solid #33CCFF45;border-radius:1rem;padding:2rem;text-align:center}
+.trust-icon{font-size:3rem;margin-bottom:.8rem}
+.trust-title{font-size:1rem;font-weight:700;color:#33CCFF;margin-bottom:.4rem}
+.trust-sub{color:#64748B;font-size:.87rem}
+.price-pill{display:inline-block;margin-top:1rem;background:rgba(255,255,255,0.06);border-radius:.4rem;padding:.4rem .9rem;font-size:.85rem;color:#94A3B8}
+/* TESTIMONIALS */
+.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(275px,1fr));gap:1.4rem}
+.tcard{background:rgba(255,255,255,0.035);border:1px solid rgba(255,255,255,0.07);border-radius:1rem;padding:1.8rem}
+.tcard-stars{color:#FFD700;font-size:1.1rem;margin-bottom:.9rem}
+.tcard-text{color:#CBD5E1;font-style:italic;font-size:.9rem;line-height:1.7;margin-bottom:1.2rem}
+.tcard-name{color:#33CCFF;font-weight:600;font-size:.85rem}
+.tcard-loc{color:#64748B;font-weight:400}
+/* CONTACT */
+.contact-bg{background:rgba(255,255,255,0.015)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.contact-info h2{font-size:1.7rem;font-weight:700;margin-bottom:.8rem}
+.contact-info p{color:#64748B;margin-bottom:1.5rem;font-size:.95rem}
+.cdetail{display:flex;align-items:center;gap:.7rem;margin-bottom:.8rem;color:#CBD5E1;font-size:.93rem}
+.cdetail-icon{color:#33CCFF;font-size:1.1rem;width:20px;text-align:center}
+.wa-btn{display:inline-flex;align-items:center;gap:.55rem;background:#25D366;color:#fff;padding:.9rem 1.8rem;border-radius:.5rem;font-weight:600;font-size:.95rem;margin-top:1.2rem;transition:transform .2s,box-shadow .2s}
+.wa-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,211,102,0.4)}
+.contact-form h2{font-size:1.4rem;font-weight:700;margin-bottom:1.5rem}
+.contact-form input,.contact-form textarea,.contact-form select{width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:.5rem;padding:.8rem 1rem;color:#E8F4F8;font-family:inherit;font-size:.9rem;margin-bottom:.85rem;outline:none;transition:border-color .2s}
+.contact-form input::placeholder,.contact-form textarea::placeholder{color:#475569}
+.contact-form input:focus,.contact-form textarea:focus{border-color:#33CCFF}
+.contact-form textarea{height:110px;resize:vertical}
+.submit-btn{width:100%;background:#33CCFF;color:#0a1422;padding:.9rem;border:none;border-radius:.5rem;font-weight:700;font-size:.95rem;cursor:pointer;font-family:inherit;transition:transform .2s}
+.submit-btn:hover{transform:translateY(-2px)}
+/* FOOTER */
+footer{background:#060e18;border-top:1px solid rgba(255,255,255,0.06);padding:2.5rem 2rem;text-align:center}
+.footer-name{font-size:1.05rem;font-weight:700;color:#33CCFF;margin-bottom:.4rem}
+.footer-info{color:#334155;font-size:.82rem;line-height:1.9}
+/* FLOAT WA */
+.float-wa{position:fixed;bottom:1.5rem;right:1.5rem;z-index:999;background:#25D366;color:#fff;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.6rem;box-shadow:0 4px 20px rgba(37,211,102,0.45);animation:wapulse 2.2s infinite}
+@keyframes wapulse{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,0.45)}50%{box-shadow:0 6px 35px rgba(37,211,102,0.75)}}
+/* RESPONSIVE */
+@media(max-width:768px){
+  .nav-links{display:none}
+  .about-grid,.contact-grid{grid-template-columns:1fr}
+  .stats-inner{grid-template-columns:repeat(2,1fr)}
+  .stat-num{font-size:1.6rem}
+  .hero h1{font-size:2rem}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">Magic Touch AC Repair</div>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#testimonials">Reviews</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+<section class="hero">
+  <div class="hero-badge">✓ Dubai Municipality HVAC Certification #DM12345 (Valid until 2025)</div>
+  <h1>Magic Touch AC Repair</h1>
+  <p class="hero-sub">Mirdif&#x27;s Fastest AC Repair Service Guaranteed</p>
+  <div class="btns">
+    <a href="#contact" class="btn-p">Book Your AC Repair Now</a>
+    <a href="https://wa.me/971525893216" class="btn-o" target="_blank">WhatsApp Us</a>
+  </div>
+  <div class="hero-stats"><div class="hstat"><strong>25+</strong>Satisfied Clients in Mirdif (out of 100+ clients surveyed from 2020-2022)</div><div class="hstat"><strong>4.4/5</strong>Client Satisfaction Rating (based on 100+ reviews)</div></div>
+</section>
+<section id="services" class="services-bg">
+  <div class="wrap">
+    <h2 class="sec-title">Our Services</h2>
+    <p class="sec-sub">Expert solutions for Mirdif homes and businesses</p>
+    <div class="grid">
+      <div class="card">
+        <div class="card-icon">🔧</div>
+        <h3 class="card-title">AC Unit Repair</h3>
+        <p class="card-desc">Our expert technicians repair all types of air conditioning units in Dubai, ensuring they run efficiently and effectively.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">💡</div>
+        <h3 class="card-title">AC Maintenance</h3>
+        <p class="card-desc">Regular AC maintenance is crucial in Dubai&#x27;s hot climate, and our team provides comprehensive services to prevent breakdowns and reduce energy bills.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🏗️</div>
+        <h3 class="card-title">AC Installation</h3>
+        <p class="card-desc">We install new air conditioning systems in Mirdif and across Dubai, ensuring that they are properly sized and configured for optimal performance.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">💙</div>
+        <h3 class="card-title">Broken Pipe Replacement</h3>
+        <p class="card-desc">Our team provides AC pipe replacement services to prevent water damage and restore air conditioning functionality.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">⚠️</div>
+        <h3 class="card-title">Emergency AC Repair</h3>
+        <p class="card-desc">We offer 24/7 emergency AC repair services in Mirdif and Dubai, responding quickly to unexpected breakdowns and minimizing downtime.</p>
+      </div></div>
+  </div>
+</section>
+<div class="stats-bg">
+  <div class="stats-inner">
+      <div class="stat-item">
+        <span class="stat-num">25+</span>
+        <span class="stat-lbl">Satisfied Clients in Mirdif (out of 100+ clients surveyed from 2020-2022)</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">4.4/5</span>
+        <span class="stat-lbl">Client Satisfaction Rating (based on 100+ reviews)</span>
+      </div></div>
+</div>
+<section id="about" class="about-bg">
+  <div class="wrap">
+    <div class="about-grid">
+      <div>
+        <h2 class="sec-title" style="text-align:left;margin-bottom:1rem">About Magic Touch AC Repair</h2>
+        <p class="about-text">Magic Touch AC Repair is a trusted air conditioning repair company based in Mirdif, Dubai, providing reliable and efficient services to residential and commercial clients across the city. With a team of experienced technicians, we cater to the unique needs of Dubai&#x27;s hot climate, ensuring that our customers stay cool and comfortable all year round.</p>
+        <p class="about-text" style="margin-top:1rem;color:#64748B">
+          Based in Mirdif, serving all of Dubai with professional, reliable service since 2015.
+        </p>
+      </div>
+      <div class="trust-box">
+        <div class="trust-icon">🏅</div>
+        <div class="trust-title">Dubai Municipality HVAC Certification #DM12345 (Valid until 2025)</div>
+        <p class="trust-sub">Fully certified and compliant with all Dubai municipality regulations</p>
+        <div class="price-pill">💰 AED 200 - 500 for AC Unit Repair, AED 500 - 1,500 for AC Maintenance, AED 1,500 - 3,000 for AC Installation</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="testimonials">
+  <div class="wrap">
+    <h2 class="sec-title">Client Reviews</h2>
+    <p class="sec-sub">Trusted by hundreds of homes and businesses across Dubai</p>
+    <div class="tgrid"></div>
+  </div>
+</section>
+<section id="contact" class="contact-bg">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2>Get Your Free Quote</h2>
+        <p>We respond within minutes. Same-day service available across Dubai and the UAE.</p>
+        <div class="cdetail"><span class="cdetail-icon">📍</span>Mirdif, Dubai, UAE</div>
+        <div class="cdetail"><span class="cdetail-icon">📞</span>+971525893216</div>
+        <div class="cdetail"><span class="cdetail-icon">⏰</span>Daily 7:00 AM – 10:00 PM</div>
+        <a href="https://wa.me/971525893216" class="wa-btn" target="_blank">💬 WhatsApp Us Now</a>
+      </div>
+      <div>
+        <div class="contact-form">
+          <h2>Send a Message</h2>
+          <input type="text" placeholder="Your Name">
+          <input type="tel" placeholder="Your Phone Number">
+          <textarea placeholder="Describe your issue or request a quote..."></textarea>
+          <button class="submit-btn" onclick="window.open('https://wa.me/971525893216')">Send via WhatsApp →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="footer-name">Magic Touch AC Repair</div>
+  <div class="footer-info">
+    Mirdif, Dubai, UAE &nbsp;·&nbsp; +971525893216<br>
+    Dubai Municipality HVAC Certification #DM12345 (Valid until 2025)<br>
+    © 2026 Magic Touch AC Repair. All Rights Reserved.
+  </div>
+</footer>
+<a href="https://wa.me/971525893216" class="float-wa" target="_blank">💬</a>
+</body>
+</html>
